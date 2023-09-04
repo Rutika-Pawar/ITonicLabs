@@ -54,20 +54,25 @@ const Hero = () => {
   const handleCloseFeedback = () => {
     setIsFeedbackOpen(false);
   };
-
+ 
   const ratingLabels = ["Poor", "Fair", "Good", "Great", "Excellent"];
+  const [buttonClicked, setButtonClicked] = useState(false);
 
+  const handleButtonClick = () => {
+    setButtonClicked(true);
+    // Add your custom behavior for the button click here
+  };
   return (
     <div className='text-white' style={{ backgroundColor: '#002244' }}>
-      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[#00df9a] font-bold p-2'>
+      <div className='max-w-[1000px] h-screen flex flex-col justify-center p-10 mt-[-90px] '>
+        <p className='text-[#00df9a] md:text-3xl font-bold mb-30'>
           Transforming education through technology.
         </p>
-        <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>
+        <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-4'>
           You think..We develop..!!
         </h1>
-        <div className='flex justify-center items-center mb-6'>
-          <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
+        <div className='flex items-center'>
+          <p className='md:text-5xl sm:text-4xl text-xl font-bold'>
             Providing software
           </p>
           <Typed
@@ -77,10 +82,28 @@ const Hero = () => {
             backSpeed={140}
             loop
           />
-          
         </div>
+        <Link to='/launches'>
+      <button
+        className='bg-[#00df9a] hover:bg-[#0ab883] text-white font-bold py-3 px-6 rounded mt-20 transition duration-300 ease-in-out transform hover:scale-105 shadow-md'
+        onClick={handleButtonClick}
+      >
+        Upcoming Launches
+      </button>
+    </Link>
       </div>
       
+      {/* Add a container for the image */}
+<div
+   className='h-screen flex items-start justify-end' // Change 'items-center' to 'items-start' and 'justify-center' to 'justify-end'
+   style={{ flex: 1, marginTop: '-700px' }}
+>
+  <img
+    src='https://www.puttiapps.com/wp-content/uploads/2021/05/Training-and-Application.gif'
+    alt='Training and Application'
+    style={{ maxWidth: '100%', maxHeight: '80%' }}
+  />
+</div>
       <Link to="/contact" style={{ textDecoration: 'none' }}>
         <button
           onClick={handleContactClick}

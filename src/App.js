@@ -11,6 +11,7 @@ import Contact from './components/Contact';
 import Product from './components/Product';
 import Clients from './components/Clients';
 import ProductSection from './components/ProductSection';
+import Launches from './components/launches';
 function App() {
   return (
     <Router>
@@ -23,8 +24,9 @@ function App() {
           <Route path="/product" element={<Product />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/launches" element={<Launches />} />
         </Routes>
-        <ProductSection />
+        
         <Services/>
         <Faq />
         <Whatwedo />

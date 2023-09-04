@@ -75,7 +75,7 @@ const WhatsNew = () => {
       des: 'Deploying websites to hosting platforms, ensuring smooth performance and accessibility worldwide.',
       icon: <FaGlobe />,
     },
-    // Add more items as needed
+   
   ];
 
   return (

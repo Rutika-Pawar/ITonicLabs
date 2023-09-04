@@ -17,7 +17,6 @@ const AboutUs = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    
     setSubmitted(true);
   };
 
@@ -28,19 +27,24 @@ const AboutUs = () => {
   };
 
   if (!showAboutUs) {
-    return null; 
+    return null;
   }
-
+  const backgroundImageStyle = {
+    backgroundImage: `url('https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+  };
   return (
     <motion.div
-      className="about-us bg-white p-6 rounded-lg shadow-md"
+      className="about-us bg-white p-6 rounded-lg shadow-lg"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="flex justify-end mb-4">
         <button
-          className="text-gray-600 hover:text-gray-600"
+          className="text-gray-600 hover:text-gray-800"
           onClick={handleCloseClick}
         >
           <FaTimes size={20} />
@@ -74,34 +78,34 @@ const AboutUs = () => {
             We'd love to hear from you! Fill out the form below and we'll get in touch.
           </p>
           <form onSubmit={handleFormSubmit}>
-            <div className="bg-[#002244] p-4 rounded-lg shadow-md text-white">
-              <div className="flex items-center mb-2">
+            <div className="bg-[#002244] p-4 rounded-lg shadow-lg text-white">
+              <div className="flex items-center mb-4">
                 <FaUser className="text-[#00df9a] text-lg mr-2" />
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="bg-transparent border border-gray-300 px-3 py-2 rounded-md w-full text-white"
+                  className="bg-transparent border border-gray-500 px-3 py-2 rounded-md w-full text-white"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
                 />
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <FaEnvelope className="text-[#00df9a] text-lg mr-2" />
                 <input
                   type="email"
                   placeholder="Your Email"
-                  className="bg-transparent border border-gray-300 px-3 py-2 rounded-md w-full text-white"
+                  className="bg-transparent border border-gray-500 px-3 py-2 rounded-md w-full text-white"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-4">
                 <FaPen className="text-[#00df9a] text-lg mr-2" />
                 <textarea
                   placeholder="Your Message"
-                  className="bg-transparent border border-gray-300 px-3 py-2 rounded-md w-full text-white"
+                  className="bg-transparent border border-gray-500 px-3 py-2 rounded-md w-full text-white"
                   rows="4"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -131,7 +135,7 @@ const AboutUs = () => {
             setSubmitted(false);
           }}
         >
-          Join Now
+         
         </button>
       )}
       <div className="mt-6">
@@ -140,16 +144,15 @@ const AboutUs = () => {
           Meet the dedicated individuals who are driving our mission forward.
         </p>
         <div className="grid grid-cols-2 gap-4 mt-4">
-          
-          <div className="bg-[#002244] p-4 rounded-lg shadow-md text-white">
-            <div className="flex items-center mb-2">
+          <div className="bg-[#002244] p-4 rounded-lg shadow-lg text-white">
+            <div className="flex items-center mb-4">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWttJiWyzbXhouuy2P1D8t7am3jvAy_IQarQ&usqp=CAU"
                 alt="Team Member"
                 className="w-10 h-10 rounded-full mr-2"
               />
               <div>
-                <p className="font-semibold">peter parker</p>
+                <p className="font-semibold">Peter Parker</p>
                 <p className="text-gray-400">Chief Executive Officer</p>
               </div>
             </div>
@@ -157,7 +160,7 @@ const AboutUs = () => {
               Peter is an experienced leader in the education industry with a passion for innovation and accessibility.
             </p>
           </div>
-          
+          {/* Add more team members here */}
         </div>
       </div>
     </motion.div>
