@@ -10,7 +10,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Product from './components/Product';
 import Clients from './components/Clients';
-import ProductSection from './components/ProductSection';
+
 import Launches from './components/launches';
 function App() {
   return (

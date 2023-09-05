@@ -57,7 +57,7 @@ const Projects = () => {
   return (
     <section id="works" className="w-full py-20 border-b-[1px] border-black">
       <div className="flex justify-center items-center text-center">
-        <Title title="Unveil brilliance in every detail as you explore our projects up close." des="PROJECTS" />
+        <Title title="Unveil brilliance in every detail as you explore our products up close." des=" OUR PRODUCTS" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14 mt-10 px-4 md:px-8 xl:px-16">
         <ProjectsCard

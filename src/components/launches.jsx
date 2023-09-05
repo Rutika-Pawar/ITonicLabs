@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-
+import screenshot1 from '../assets/screenshot1.png';
+import screenshot2 from '../assets/screenshot2.png';
+import screenshot3 from '../assets/screenshot3.png';
 
 const App = () => {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -19,7 +21,7 @@ const App = () => {
       background-color: #fff;
       font-family: Arial, sans-serif;
       border: 1px solid #ccc;
-      border-radius: 10px;
+      border-radius: 0px;
       padding: 20px;
     }
 
@@ -74,48 +76,68 @@ const App = () => {
       font-weight: bold;
     }
 
+    .impressive-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .impressive-header {
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
     .check-out-button {
       background-color: #00df9a;
       color: white;
-      padding: 4px 5px;
+      padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
     }
 
-    .close-content-button {
-      cursor: pointer;
-      font-size: 24px;
+    .check-out-button:hover {
+      background-color: #00987a;
+    }
+    
+    .impressive-box.show-content {
+      transform: translateY(-20px);
     }
   `;
 
   return (
     <div className="app-container">
     <style>{styles}</style>
-    <h2 className="launch-heading" style={{ fontSize: '36px', fontWeight: 'bold', textAlign: 'center', marginBottom: '50px', marginTop: '50px',color: '#00df9a' }}>
+    <h2 className="launch-heading" style={{ fontSize: '36px', fontWeight: 'bold', textAlign: 'center', marginBottom: '50px', marginTop: '50px', color: '#00df9a' }}>
       Our Launches
     </h2>
-    <div className="welcome-box"style={{ fontWeight: 'bold'}}>
+    <div className="welcome-box" style={{ fontWeight: 'bold' }}>
       Welcome to Product Launch! 👋
       <span className="close-button" onClick={closeWelcome}>
         X
       </span>
-        <p>A drive through our launch and discover new tech products.</p>
-      </div>
-      <header className="header">
-        BRAINBOOSTERJR
-        {showContent ? (
-          <span className="close-content-button" onClick={toggleContent}>
-            X
-          </span>
-        ) : (
-          <button className="check-out-button" onClick={toggleContent}>
-            Check Out
-          </button>
-        )}
-      </header>
-
-     
+      <p>A drive through our launch and discover new tech products.</p>
+    </div>
+    <div className={`impressive-box ${showContent ? 'show-content' : ''}`}>
+      <span className="impressive-header">BRAINBOOSTERJR</span>
+      {showContent ? (
+        <span className="close-content-button" onClick={toggleContent}>
+          X
+        </span>
+      ) : (
+        <button className="check-out-button" onClick={toggleContent}>
+          Check Out
+        </button>
+      )}
+    </div>
        
 {showContent && (
     <div>
@@ -138,11 +160,18 @@ const App = () => {
         This app is available for all of your devices
       </div>
       <div className="screenshots">
-        {/* Add screenshot images here */}
-        <img className="screenshot" src={require('../assets/screenshot1.png').default} alt="Screenshot 1" />
-        <img className="screenshot" src={require('../assets/screenshot2.png').default} alt="Screenshot 2" />
-        <img className="screenshot" src={require('../assets/screenshot3.png').default} alt="Screenshot 3" />
-      </div>
+      {/* Add screenshot images here */}
+      {[screenshot1, screenshot2, screenshot3].map((image, index) => (
+        <img
+          key={index}
+          className="screenshot"
+          src={image}
+          alt={`Screenshot ${index + 1}`}
+          style={{ margin: '30px' }} 
+        />
+      ))}
+    </div>
+
       <div className="about-app">
         <h2>About this app</h2>
         <p>

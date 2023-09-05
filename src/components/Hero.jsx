@@ -65,7 +65,7 @@ const Hero = () => {
   return (
     <div className='text-white' style={{ backgroundColor: '#002244' }}>
       <div className='max-w-[1000px] h-screen flex flex-col justify-center p-10 mt-[-90px] '>
-        <p className='text-[#00df9a] md:text-3xl font-bold mb-30'>
+        <p className='text-[#00df9a] md:text-2xl font-bold mb-30'>
           Transforming education through technology.
         </p>
         <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-4'>
@@ -96,10 +96,10 @@ const Hero = () => {
       {/* Add a container for the image */}
 <div
    className='h-screen flex items-start justify-end' // Change 'items-center' to 'items-start' and 'justify-center' to 'justify-end'
-   style={{ flex: 1, marginTop: '-700px' }}
+   style={{ flex: 1, marginTop: '-600px' }}
 >
   <img
-    src='https://www.puttiapps.com/wp-content/uploads/2021/05/Training-and-Application.gif'
+    src='https://inizsoft.com/wp-content/uploads/2021/02/wordpress-Development-Company-in-India1.gif'
     alt='Training and Application'
     style={{ maxWidth: '100%', maxHeight: '80%' }}
   />
