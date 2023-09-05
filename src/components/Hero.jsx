@@ -64,7 +64,7 @@ const Hero = () => {
   };
   return (
     <div className='text-white' style={{ backgroundColor: '#002244' }}>
-      <div className='max-w-[1000px] h-screen flex flex-col justify-center p-10 mt-[-90px] '>
+      <div className='max-w-[1000px] h-screen flex flex-col justify-center p-10 mt-[-50px] '>
         <p className='text-[#00df9a] md:text-2xl font-bold mb-30'>
           Transforming education through technology.
         </p>
