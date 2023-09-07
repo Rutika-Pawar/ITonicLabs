@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import itonicLabsLogo from '../assets/itoniclabs.png';
-import Navbar from '../styles/Navbar.css';
+import '../styles/Navbar.css';
 
 const Navbarcomponent = () => {
   const [nav, setNav] = useState(false);
@@ -12,7 +12,7 @@ const Navbarcomponent = () => {
   };
 
   return (
-    <div className="navbar">
+    <div className={nav ? 'navbar active' : 'navbar'}>
       <h1 className="logo">
         <img
           className="logo-icon"
@@ -41,4 +41,4 @@ const Navbarcomponent = () => {
   );
 };
 
-export default Navbar;
+export default Navbarcomponent;
