@@ -3,9 +3,9 @@ import Typed from 'react-typed';
 import { FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import '../styles/Hero.css';
+import Hero from '../styles/Hero.css';
 
-const Hero = () => {
+const HeroComponent  = () => {
   const [showContactText, setShowContactText] = useState(false);
 
   const handleContactClick = () => {
