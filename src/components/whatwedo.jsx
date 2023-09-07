@@ -4,30 +4,29 @@ import { FaMobile, FaGlobe } from 'react-icons/fa';
 import { SiProgress, SiReact } from 'react-icons/si';
 import { DiReact } from 'react-icons/di';
 import { HiArrowRight } from 'react-icons/hi';
+import WhatsNew from '../styles/WhatsNew.css'; 
 
 const Card = ({ item: { title, des, icon } }) => {
   return (
-    <div className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-[#002244] group hover:bg-[#003377] transition-colors duration-100 group boarder boarder-[#00df9a]">
-      <div className="h-72 overflow-y-hidden">
-        <div className="flex h-full flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-          <div className="w-10 h-8 flex flex-col justify-between">
+    <div className="whats-new-card">
+      <div className="whats-new-card-inner">
+        <div className="whats-new-card-content">
+          <div className="whats-new-icon">
             {icon ? (
-              <span className="text-5xl text-white">{icon}</span>
+              <span className="whats-new-icon-text">{icon}</span>
             ) : (
               <>
-                <span className="w-full h-[2px] rounded-lg bg-white inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-white inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-white inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-white inline-flex"></span>
+                <span className="whats-new-icon-line"></span>
+                <span className="whats-new-icon-line"></span>
+                <span className="whats-new-icon-line"></span>
+                <span className="whats-new-icon-line"></span>
               </>
             )}
           </div>
-          <div className="flex flex-col gap-6">
-            <h2 className="text-xl md:text-2xl font-titleFont font-bold text-[#00df9a]">
-              {title}
-            </h2>
-            <p className="base text-white">{des}</p>
-            <span className="text-2xl text-[#00df9a]">
+          <div className="whats-new-details">
+            <h2 className="whats-new-title">{title}</h2>
+            <p className="whats-new-description">{des}</p>
+            <span className="whats-new-arrow">
               <HiArrowRight />
             </span>
           </div>
@@ -37,7 +36,7 @@ const Card = ({ item: { title, des, icon } }) => {
   );
 };
 
-const WhatsNew = () => {
+const WhatsNewcomponent = () => {
   const whatsNewData = [
     {
       id: 1,
@@ -75,15 +74,12 @@ const WhatsNew = () => {
       des: 'Deploying websites to hosting platforms, ensuring smooth performance and accessibility worldwide.',
       icon: <FaGlobe />,
     },
-   
   ];
 
   return (
-    <section id="whats-new" className="w-full py-20 bg-white border-b-[1px] border-b-black">
-      <h2 className="text-3xl md:text-4xl font-titleFont font-bold text-[#00df9a] text-center mb-8">
-        WHAT'S NEW
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-20 px-4 md:px-8 xl:px-16">
+    <section id="whats-new" className="whats-new-section">
+      <h2 className="whats-new-section-title">WHAT'S NEW</h2>
+      <div className="whats-new-grid">
         {whatsNewData.map((item) => (
           <Card item={item} key={item.id} />
         ))}

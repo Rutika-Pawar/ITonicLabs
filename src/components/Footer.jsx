@@ -8,71 +8,72 @@ import {
 } from 'react-icons/fa';
 
 import itonicLabsLogo from '../assets/itoniclabs.png'; 
+import Footer from '../styles/Footer.css';
 
-const Footer = () => {
+const Footercomponent = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-[#002244]'>
-      <div className='flex items-start'>
+    <div className='footer-container'>
+      <div className='footer-logo'>
         <img
           src={itonicLabsLogo}
           alt='Itonic Labs Logo'
-          className='w-20 h-20 mr-4'
+          className='logo-image'
         />
         <div>
-          <h1 className='text-3xl font-bold text-[#00df9a]'>Itonic Labs</h1>
-          <p className='py-4'>Providing innovative tech solutions.</p>
-          <div className='flex justify-between md:w-[75%] my-6'>
-            <a href='#' className='text-gray-300 hover:text-white'>
+          <h1 className='logo-title'>Itonic Labs</h1>
+          <p className='logo-description'>Providing innovative tech solutions.</p>
+          <div className='social-links'>
+            <a href='#' className='social-link'>
               <FaFacebookSquare size={30} />
             </a>
-            <a href='#' className='text-gray-300 hover:text-white'>
+            <a href='#' className='social-link'>
               <FaInstagram size={30} />
             </a>
-            <a href='#' className='text-gray-300 hover:text-white'>
+            <a href='#' className='social-link'>
               <FaTwitterSquare size={30} />
             </a>
-            <a href='#' className='text-gray-300 hover:text-white'>
+            <a href='#' className='social-link'>
               <FaGithubSquare size={30} />
             </a>
-            <a href='#' className='text-gray-300 hover:text-white'>
+            <a href='#' className='social-link'>
               <FaDribbbleSquare size={30} />
             </a>
           </div>
         </div>
       </div>
-      <div className='lg:col-span-2 flex justify-between mt-6'>
+      <div className='footer-links'>
         <div>
-          <h6 className='font-medium text-gray-400'>Services</h6>
+          <h6 className='link-title'>Services</h6>
           <ul>
-            <li className='py-2 text-sm'>Software Development</li>
-            <li className='py-2 text-sm'>Web Design</li>
-            <li className='py-2 text-sm'>Cloud Solutions</li>
-            <li className='py-2 text-sm'>Consulting</li>
+            <li className='link-item'>Software Development</li>
+            <li className='link-item'>Web Design</li>
+            <li className='link-item'>Cloud Solutions</li>
+            <li className='link-item'>Consulting</li>
           </ul>
         </div>
         <div>
-          <h6 className='font-medium text-gray-400'>Support</h6>
+          <h6 className='link-title'>Support</h6>
           <ul>
-            <li className='py-2 text-sm'>Pricing</li>
-            <li className='py-2 text-sm'>Documentation</li>
-            <li className='py-2 text-sm'>Guides</li>
-            <li className='py-2 text-sm'>API Status</li>
+            <li className='link-item'>Pricing</li>
+            <li className='link-item'>Documentation</li>
+            <li className='link-item'>Guides</li>
+            <li className='link-item'>API Status</li>
           </ul>
         </div>
         <div>
-          <h6 className='font-medium text-gray-400'>Company</h6>
+          <h6 className='link-title'>Company</h6>
           <ul>
-            <li className='py-2 text-sm'>About Us</li>
-            <li className='py-2 text-sm'>Blog</li>
-            <li className='py-2 text-sm'>Careers</li>
-            <li className='py-2 text-sm'>Contact</li>
+            <li className='link-item'>About Us</li>
+            <li className='link-item'>Blog</li>
+            <li className='link-item'>Careers</li>
+            <li className='link-item'>Contact</li>
           </ul>
         </div>
         <div>
-          <h6 className='font-medium text-gray-400'>Legal</h6>
+          <h6 className='link-title'>Legal</h6>
           <ul>
-            <li className='py-2 text-sm'>Privacy Policy</li>
-            <li className='py-2 text-sm'>Terms of Use</li>
+            <li className='link-item'>Privacy Policy</li>
+            <li className='link-item'>Terms of Use</li>
           </ul>
         </div>
       </div>

@@ -1,0 +1,119 @@
+/* FaqSection.css */
+.faq-section {
+    width: 100%;
+    padding: 16px;
+    background-color: #002244;
+    color: white;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  
+  .faq-heading {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #00df9a;
+    margin-bottom: 4px;
+  }
+  
+  .faq-item {
+    border: 1px solid #002244;
+    border-radius: 4px;
+    background-color: #002244;
+    padding: 4px;
+    cursor: pointer;
+  }
+  
+  .faq-item .faq-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .faq-item .faq-question {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .faq-item .faq-icon {
+    color: #00df9a;
+  }
+  
+  .faq-item .faq-answer {
+    display: none;
+    padding-left: 16px;
+    padding-top: 8px;
+    color: #00df9a;
+  }
+  
+  .faq-item.open .faq-answer {
+    display: block;
+  }
+  
+  .query-form {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
+  }
+  
+  .query-form .form-container {
+    background-color: white;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .query-form .form-heading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00df9a;
+    margin-bottom: 12px;
+  }
+  
+  .query-form .form-label {
+    color: #00df9a;
+    margin-bottom: 4px;
+  }
+  
+  .query-form .form-input {
+    background-color: #f0f0f0;
+    color: #00df9a;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .query-form .form-textarea {
+    background-color: #f0f0f0;
+    color: #00df9a;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+  }
+  
+  .query-form .form-submit {
+    background-color: #00df9a;
+    color: white;
+    padding: 8px 16px;
+    border: 1px solid #00df9a;
+    border-radius: 4px;
+  }
+  
+  .query-form .form-success {
+    color: #00df9a;
+    margin-top: 12px;
+  }
+  
+  .query-button {
+    position: absolute;
+    bottom: 15px;
+    left: 4px;
+  }
+  

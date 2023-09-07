@@ -3,7 +3,7 @@ import Typed from 'react-typed';
 import { FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import Hero from '../styles/Hero.css';
+import Hero from '../styles/hero.css';
 
 const HeroComponent  = () => {
   const [showContactText, setShowContactText] = useState(false);

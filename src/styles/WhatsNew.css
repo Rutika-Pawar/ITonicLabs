@@ -1,0 +1,96 @@
+/* WhatsNew.css */
+.whats-new-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+  }
+  
+  .whats-new-section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00df9a;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .whats-new-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  
+  .whats-new-card {
+    width: 100%;
+    padding: 20px;
+    background-color: #002244;
+    border: 1px solid #00df9a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  
+  .whats-new-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .whats-new-card-inner {
+    overflow-y: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .whats-new-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translateY(16px);
+    transition: transform 0.5s;
+  }
+  
+  .whats-new-icon {
+    width: 100%;
+    height: 72px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .whats-new-icon-text {
+    font-size: 32px;
+    color: #fff;
+  }
+  
+  .whats-new-icon-line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 5px;
+  }
+  
+  .whats-new-details {
+    flex: 1;
+  }
+  
+  .whats-new-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00df9a;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .whats-new-description {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .whats-new-arrow {
+    font-size: 32px;
+    color: #00df9a;
+    text-align: center;
+  }
+  
