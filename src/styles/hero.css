@@ -122,10 +122,10 @@
     position: fixed;
     inset: 0;
     display: flex;
-    items: center;
     justify-content: center;
+    align-items: center;
     background: rgba(0, 0, 0, 0.5);
-    backdrop-blur: 10px;
+    backdrop-filter: blur(10px);
     z-index: 50;
   }
   
